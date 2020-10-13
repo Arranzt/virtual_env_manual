@@ -2,8 +2,8 @@
 
 ***
 |インストールが必要なソフト|バージョン|
-|---|---|
-|Nginx|最新版|
+|CentOS|7.8.2003|
+|Nginx|1.16.1|
 |PHP|7.3|
 |Laravel|6.0|
 |MySQL|5.7|
@@ -110,9 +110,15 @@ boxを追加するためのコマンドになります。
 Enter your choice: 3
 ```
 
-下記のように表示されたら完了です。
+下記のように表示されるか確認しましょう。
 ```
 Successfully added box 'centos/7' (v1902.01) for 'virtualbox'!
+```
+
+最後に、下記コマンドを実行して、バージョンが確認できればOKです。
+```
+[vagrant@localhost ~]$ cat /etc/redhat-release
+CentOS Linux release 7.8.2003 (Core)
 ```
 
 ### vagrant用ディレクトリの作成  
@@ -134,7 +140,7 @@ $ mkdir vagrant_test_app
  「make directory」の略で、そのままディレクトリを新規作成するコマンドになります
 
 ***
-## ②ipアドレスの設定とvagrantの起動  
+## ②ipアドレスの設定とvagrantの起動  
 ### vagrantの起動準備について
 
 以下のコマンドを実行し、vagrant_test_appディレクトリ下でvagrantを起動するための準備を行って下さい。
